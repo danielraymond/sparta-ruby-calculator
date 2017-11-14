@@ -81,6 +81,7 @@ def advanced_calculator
   end
 end
 
+# function to complete power calculations
 def power_calculation
   puts "Enter the base number:"
   first_number = gets.chomp
@@ -91,6 +92,15 @@ def power_calculation
   answer = first_number ** second_number
   answer = answer.round(2)
   puts "#{first_number} ^ #{second_number} = #{answer}"
+end
+
+# function to find the square root of a number
+def root_calculation
+  puts "Enter the number you would like to calculate the square root of:"
+  root_number = gets.chomp
+  root_number = root_number.to_f
+  answer = Math.sqrt(root_number)
+  puts "The square root of #{root_number} = #{answer}"
 end
 
 calculator_type
