@@ -26,12 +26,47 @@ def basic_calculator
   end
 end
 
+# function to do addition
 def addition_calculation(number_one)
   puts "Enter the second_number:"
   second_number = gets.chomp
   number_one = number_one.to_f
   second_number = second_number.to_f
   answer = number_one + second_number
+  answer = answer.round(2)
   puts "#{number_one} + #{second_number} = #{answer}"
+end
+
+# function to do subtraction
+def subtraction_calculation(number_one)
+  puts "Enter the second_number:"
+  second_number = gets.chomp
+  number_one = number_one.to_f
+  second_number = second_number.to_f
+  answer = number_one - second_number
+  answer = answer.round(2)
+  puts "#{number_one} - #{second_number} = #{answer}"
+end
+
+# function to do division
+def division_calculation(number_one)
+  puts "Enter the second_number:"
+  second_number = gets.chomp
+  number_one = number_one.to_f
+  second_number = second_number.to_f
+  answer = number_one / second_number
+  answer = answer.round(2)
+  puts "#{number_one} / #{second_number} = #{answer}"
+end
+
+# function to do multiplication
+def multiplication_calculation(number_one)
+  puts "Enter the second_number:"
+  second_number = gets.chomp
+  number_one = number_one.to_f
+  second_number = second_number.to_f
+  answer = number_one * second_number
+  answer = answer.round(2)
+  puts "#{number_one} * #{second_number} = #{answer}"
 end
 calculator_type
