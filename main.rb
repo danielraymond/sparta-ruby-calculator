@@ -3,10 +3,8 @@ def calculator_type
   puts "Which calculator type would you like to use? (Enter 'b' for basic or 'a' for advanced.)"
   calc_type = gets.chomp
   if calc_type == "b"
-    puts "You entered " + calc_type
     basic_calculator
   elsif calc_type == "a"
-    puts "You entered " + calc_type
 
   end
 end
@@ -18,14 +16,22 @@ def basic_calculator
   puts "Enter the operator you would like use:"
   operator = gets.chomp
   if operator == "+"
-    addition_calculation
+    addition_calculation(first_number)
   elsif operator == "-"
-    subtraction_calculation
+    subtraction_calculation(first_number)
   elsif operator == "/"
-    division_calculation
+    division_calculation(first_number)
   elsif operator == "*"
-    multiplication_calculation
+    multiplication_calculation(first_number)
   end
 end
 
+def addition_calculation(number_one)
+  puts "Enter the second_number:"
+  second_number = gets.chomp
+  number_one = number_one.to_f
+  second_number = second_number.to_f
+  answer = number_one + second_number
+  puts "#{number_one} + #{second_number} = #{answer}"
+end
 calculator_type
