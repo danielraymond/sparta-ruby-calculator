@@ -5,7 +5,7 @@ def calculator_type
   if calc_type == "b"
     basic_calculator
   elsif calc_type == "a"
-
+    advanced_calculator
   end
 end
 
@@ -69,4 +69,28 @@ def multiplication_calculation(number_one)
   answer = answer.round(2)
   puts "#{number_one} * #{second_number} = #{answer}"
 end
+
+# function to check which type of advanced calculation to make
+def advanced_calculator
+  puts "Enter the calculation type you would like to make ('p' for power, 'r' for square root.)"
+  advanced_calculator_type = gets.chomp
+  if advanced_calculator_type == "p"
+    power_calculation
+  elsif advanced_calculator_type == "r"
+    root_calculation
+  end
+end
+
+def power_calculation
+  puts "Enter the base number:"
+  first_number = gets.chomp
+  puts "Enter the exponent:"
+  second_number = gets.chomp
+  first_number = first_number.to_f
+  second_number = second_number.to_f
+  answer = first_number ** second_number
+  answer = answer.round(2)
+  puts "#{first_number} ^ #{second_number} = #{answer}"
+end
+
 calculator_type
