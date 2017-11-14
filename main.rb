@@ -6,6 +6,8 @@ def calculator_type
     basic_calculator
   elsif calc_type == "a"
     advanced_calculator
+  else
+    puts "Invalid input!"
   end
 end
 
@@ -23,6 +25,8 @@ def basic_calculator
     division_calculation(first_number)
   elsif operator == "*"
     multiplication_calculation(first_number)
+  else
+    puts "Invalid input!"
   end
 end
 
@@ -78,6 +82,8 @@ def advanced_calculator
     power_calculation
   elsif advanced_calculator_type == "r"
     root_calculation
+  else
+    puts "Invalid input!"
   end
 end
 
